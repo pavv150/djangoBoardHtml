@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail</title>
+</head>
+<body>
+    글내용 날짜:{{board.regdate}}
+    <br>
+    조회수:{{board.readcount}}
+    <br>
+    작성자:{{board.writer}}
+    <br>
+    제목:{{board.title}}
+    <br>
+    내용:{{board.content}}
+    <hr>
+    <a href="{% url 'board:edit' board.id %}">수정</a>
+    <br>
+    <a href="{% url 'board:delete' board.id %}">삭제</a>
+    <br>
+    <a href="{% url 'board:list' %}">목록보기</a>
+</body>
+</html>
