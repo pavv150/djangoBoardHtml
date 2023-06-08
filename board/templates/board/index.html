@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-</head>
-<body>
+{% extends 'board/base.html' %} {# 상속 #}
+{% block title %}Index{% endblock %}
+{% load static %}
+{% block content %}
     <ul>
         <li><a href="{% url 'board:list' %}"><button>목록</button></a></li>
         <li><a href="{% url 'board:regist' %}"><button>등록</button></a></li>
     </ul>
-</body>
-</html>
+{% endblock %}
