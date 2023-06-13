@@ -4,13 +4,12 @@
 {% block content %}
 <form method="post">
     {% csrf_token %}
-    제목:<input type="text" name="title">
-    <br>
-    작성자:<input type="text" name="writer">
-    <br>
-    <div>내용:</div>
-    <textarea cols="30" rows="10" name="content"></textarea>
-    <br>
+    <table>
+        {{form.as_table}}
+    </table>
     <input type="submit" value="작성">
+    <!-- views.py랑 button_label(변수)가 같아야됨 -->
+    <!-- <input type="submit" value={{button_label}}> -->
+    
 </form>
 {% endblock %}

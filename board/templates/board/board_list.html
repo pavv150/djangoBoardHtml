@@ -2,14 +2,14 @@
 {% block title %}list{% endblock %}
 {% load static %}
 {% block content %}
-    <table border="1">
+    <table style="width : 400px; height: 400px;"border="1">
         <tr>
             <td>번호</td>
             <td>제목</td>
             <td>작성자</td>
             <td>조회수</td>
         </tr>
-        {% for b in board %}
+        {% for b in object_list %}
         <tr>
             <td>{{b.id}}</td>
             <td><a href="{% url 'board:detail' b.id %}">{{b.title}}</a></td>

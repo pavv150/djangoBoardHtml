@@ -2,10 +2,10 @@
 {% block title %}delete{% endblock %}
 {% load static %}
 {% block content %}
-    선택하신 게시글 {{board.title}}.{{board.writer}}를 정말 삭제하시겠습니까?
+    선택하신 게시글 {{object.title}}.{{object.writer}}를 정말 삭제하시겠습니까?
     <form method="post">
         {% csrf_token %}
         <input type="submit" value="삭제">
     </form>
-    <a href="{% url 'board:detail' board.id %}">취소</a>
+    <a href="{% url 'board:detail' object.id %}">취소</a>
 {% endblock %}

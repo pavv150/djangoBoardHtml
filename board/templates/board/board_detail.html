@@ -1,0 +1,20 @@
+{% extends 'board/base.html' %} {# 상속 #}
+{% block title %}detail{% endblock %}
+{% load static %}
+{% block content %}
+    글내용 날짜:{{object.regdate}}
+    <br>
+    조회수:{{object.readcount}}
+    <br>
+    작성자:{{object.writer}}
+    <br>
+    제목:{{object.title}}
+    <br>
+    내용:{{object.content}}
+    <hr>
+    <a href="{% url 'board:edit' object.id %}">수정</a>
+    <br>
+    <a href="{% url 'board:delete' object.id %}">삭제</a>
+    <br>
+    <a href="{% url 'board:list' %}">목록보기</a>
+{% endblock %}
